@@ -1,3 +1,5 @@
+import pandas as pd
+
 def analyze_top_handsets(df):
     """Identify the top 10 handsets used by customers."""
     return df['Handset Type'].value_counts().head(10)

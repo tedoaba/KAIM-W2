@@ -1,3 +1,7 @@
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from src.data_processing import load_data, describe_data, check_data_quality, aggregate_engagement_metrics
 from src.clustering import normalize_data, perform_kmeans_clustering, cluster_statistics
 from src.visualization import plot_cluster_boxplots, plot_top_3_applications
