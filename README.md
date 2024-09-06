@@ -1,4 +1,4 @@
-# KAIM Weak 2 Challenges
+# KAIM Weak 2 Challenges Task 1
 
 ## **Project Overview**
 
@@ -71,31 +71,31 @@ The project follows a modular and scalable structure for ease of use and reusabi
 ├── .vscode/
 │   └── settings.json
 ├── .github/
-│   └── workflows/
-│       └── unittests.yml
+│   └── workflows
+│       ├── unittests.yml  # CI/CD pipeline
 ├── .gitignore
-├── requirements.txt
-├── README.md
-├── src/
+├── requirements.txt       # Dependencies
+├── README.md              # Project documentation
+├── src/                   # Core modules
 │   ├── __init__.py
-│   ├── data_preparation.py
-│   ├── eda_analysis.py
-│   ├── model_training.py
-├── notebooks/
+│   ├── data_processing.py # Data loading, cleaning, and aggregation
+│   ├── clustering.py      # Clustering and engagement classification
+│   ├── visualization.py   # Visualization functions
+│   └── analysis.py        # Application-wise user analysis
+├── tests/                 # Unit test cases
 │   ├── __init__.py
-│   ├── KAIM_Week2_task_1.ipynb
-|   ├── KAIM_Week2_task_2.ipynb
-│   ├── KAIM_Week2_task_3.ipynb
-│   ├── KAIM_Week2_task_4.ipynb
-├── tests/
+│   ├── test_data_processing.py
+│   ├── test_clustering.py
+│   ├── test_visualization.py
+│   └── test_analysis.py
+├── scripts/
 │   ├── __init__.py
-│   ├── test_data_preparation.py
-│   ├── test_eda_analysis.py
-│   ├── test_model_training.py
-└── scripts/
-    ├── data_extraction.sql
-    ├── export_to_mysql.py
-    ├── dashboard_deployment.py
+│   └── main.py            # Main entry point for running tasks
+├── data/
+│   └── data.csv           # Dataset location
+└── notebooks/
+    ├── __init__.py
+    └── README.md
 ```
 
 - **src/**: Contains Python modules for data preparation, exploratory data analysis, and model training.
