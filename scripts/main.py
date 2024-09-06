@@ -25,5 +25,5 @@ def main(path):
     plot_cluster_results(agg_data, 'Total Traffic (Bytes)')
     
 if __name__ == "__main__":
-    data_path = "path/to/telecom.csv"
+    data_path = "../data/data.csv"
     main(data_path)
