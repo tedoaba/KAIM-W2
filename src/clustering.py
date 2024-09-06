@@ -1,5 +1,7 @@
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.cluster import KMeans
+import pandas as pd
+
 
 def normalize_data(agg_data):
     """Normalize engagement metrics using MinMaxScaler."""

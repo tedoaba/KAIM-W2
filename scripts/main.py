@@ -8,7 +8,7 @@ from src.visualization import plot_cluster_boxplots, plot_top_3_applications
 from src.analysis import analyze_top_handsets, analyze_top_manufacturers, aggregate_application_data, get_top_10_users_per_application
 
 # Load the dataset
-df = load_data('data/data.csv')
+df = load_data('../data/data.csv')
 
 # Data description
 shape, stats = describe_data(df)
