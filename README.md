@@ -1,4 +1,4 @@
-# KAIM Weak 2 Challenges Task 1
+# KAIM Weak 2 Challenges
 
 ## **Project Overview**
 
@@ -14,6 +14,19 @@ This project involves a detailed analysis of a telecommunications dataset from T
 - Provide recommendations for marketing teams based on the analysis.
 
 **Branch**: `task-1`
+
+### **Task 2: User Engagement Analysis**
+
+**Objective**: Measure customer engagement by analyzing session frequency, duration, and total data traffic.
+
+- Aggregate session frequency, session duration, and total data traffic (download and upload).
+- Report the top 10 customers based on each engagement metric.
+- Normalize the metrics and perform k-means clustering (k=3) to group customers into engagement clusters.
+- Visualize the top 3 most used applications.
+- Determine the optimal value of k using the elbow method.
+
+**Branch**: `task-2`
+
 
 ## **Project Structure**
 
@@ -31,6 +44,8 @@ The project follows a modular and scalable structure for ease of use and reusabi
 ├── src/                   # Core modules
 │   ├── __init__.py
 │   ├── data_processing.py # Data loading, cleaning, and aggregation
+    ├── data_loader.py       # For loading data
+│   ├── data_preprocessing.py # For cleaning and scaling
 │   ├── clustering.py      # Clustering and engagement classification
 │   ├── visualization.py   # Visualization functions
 │   └── analysis.py        # Application-wise user analysis
@@ -62,7 +77,9 @@ The project follows a modular and scalable structure for ease of use and reusabi
    ```bash
    git clone https://github.com/tedoaba/KAIM-W2.git
    cd KAIM-W2
+
    git checkout task-1
+   git checkout task-2
    ```
 
 2. **Install Dependencies**:
