@@ -9,9 +9,11 @@ from src.clustering import perform_clustering
 
 # Load and preprocess data
 df = load_and_preprocess_data('../data/data.csv')
+df.head()
 
 # Aggregate experience data
 experience_data = aggregate_experience_data(df)
+experience_data.head()
 
 # Perform clustering
 experience_data = perform_clustering(experience_data)
