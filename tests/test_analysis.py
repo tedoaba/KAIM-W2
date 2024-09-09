@@ -1,4 +1,8 @@
 import pandas as pd
+import sys
+import os
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
+
 from src.analysis import aggregate_experience_data
 
 def test_aggregate_experience_data():
