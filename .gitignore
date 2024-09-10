@@ -11,7 +11,7 @@ __pycache__/
 .env
 
 # Dataset
-data/
+
 
 # Database
 schema.sql
