@@ -1,15 +1,12 @@
-import streamlit as st
-import sys
-import os
-sys.path.append(os.path.abspath('../src'))
+
 
 # Import necessary libraries
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
-
-from load_data import load_data_from_postgres, load_data_using_sqlalchemy
+import streamlit as st
+#from load_data import load_data_from_postgres, load_data_using_sqlalchemy
 
 def show_overview():
     st.header("Situational Overview (Business Need)")
@@ -18,15 +15,17 @@ def show_overview():
 
     Your current task is to evaluate TellCo, a mobile service provider in the Republic of Pefkakia, using a telecommunication dataset to assess its growth potential and determine whether it is a worthwhile investment. The analysis will involve detailed exploration of user data to provide actionable insights that will guide the investment decision.
     """)
-    st.subheader('Data From PostgreSQL')
+    #
+    # st.subheader('Sample data from the dataset')
     # Define your SQL query
-    query = "SELECT * FROM xdr_data;"  # Replace with your actual table name
+    #query = "SELECT * FROM xdr_data;"  # Replace with your actual table name
 
     # Load data from PostgreSQL
-    df = load_data_using_sqlalchemy(query)
+    #df = load_data_using_sqlalchemy(query)
+    #df = pd.read_csv('../data/data.csv')
 
     # Display the first few rows of the dataset
-    st.write(df.head())
+    #st.write(df.head())
     
 
 def show_completed_tasks():
