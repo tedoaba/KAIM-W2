@@ -12,6 +12,10 @@ __pycache__/
 # Dataset
 data/
 
+# Database
+schema.sql
+telecom.sql
+
 # Distribution / packaging
 .Python
 build/
