@@ -4,35 +4,45 @@
 
 This project involves a detailed analysis of a telecommunications dataset from TellCo, a mobile service provider in the Republic of Pefkakia. The objective is to analyze various aspects of customer behavior, engagement, experience, and satisfaction. The insights derived from the analysis will help a potential investor determine whether to acquire TellCo by highlighting growth opportunities and profitability potential.
 
-### **Task 1: User Overview Analysis**
+### **Task 5: Dashboard Development**
 
-**Objective**: Explore the dataset to understand user behavior and handset usage patterns.
+**Objective:**
+    To design and develop a comprehensive dashboard that visualizes the insights gained from the analyses conducted in previous tasks. The goal is to present the data in an accessible and interactive manner to facilitate easier interpretation and decision-making.
 
-- Identify the top 10 handsets used by customers.
-- Identify the top 3 handset manufacturers and the top 5 handsets per manufacturer.
-- Analyze user behavior on different applications (social media, YouTube, Netflix, etc.).
-- Provide recommendations for marketing teams based on the analysis.
+    **Scope of Work:**
 
-**Branch**: `task-1`
+    1. **Dashboard Design:**
+       - The dashboard is organized into separate pages, each dedicated to a specific analysis task:
+         - **User Overview Analysis**
+         - **User Engagement Analysis**
+         - **Experience Analysis**
+         - **Satisfaction Analysis**
 
-### **Task 2: User Engagement Analysis**
+    2. **Visualization:**
+       - Each page includes relevant plots and visualizations to represent the data insights effectively:
+         - **User Overview Analysis:** Visualizations related to handset popularity, user behavior, and device preferences.
+         - **User Engagement Analysis:** Charts highlighting user engagement metrics, clustering results, and application usage.
+         - **Experience Analysis:** Plots depicting network performance metrics, user experience data, and clustering outcomes.
+         - **Satisfaction Analysis:** Visualizations of engagement and experience scores, satisfaction levels, and predictions.
 
-**Objective**: Measure customer engagement by analyzing session frequency, duration, and total data traffic.
+    3. **Key Performance Indicators (KPIs):**
+       - **Dashboard Usability:** Ensures that the dashboard is intuitive and easy to navigate, with clear labels and instructions.
+       - **Interactive Elements:** Utilizes widgets and interactive features to enhance user engagement and allow for dynamic data exploration.
+       - **Visual Appeal:** Adheres to a clean and professional design, effectively communicating data insights through well-structured layouts and visuals.
+       - **Deployment Success:** Guarantees that the dashboard is fully functional and accessible via a public URL, ensuring stakeholders can interact with the data seamlessly.
 
-- Aggregate session frequency, session duration, and total data traffic (download and upload).
-- Report the top 10 customers based on each engagement metric.
-- Normalize the metrics and perform k-means clustering (k=3) to group customers into engagement clusters.
-- Visualize the top 3 most used applications.
-- Determine the optimal value of k using the elbow method.
+    **Outcome:**
+    The developed dashboard provides a user-friendly interface to explore and analyze the data insights derived from the comprehensive analyses. It supports informed decision-making by presenting key metrics and findings in an interactive and visually appealing format.
 
-**Branch**: `task-2`
+**Branch**: `task-5`
 
 
 ## **Project Structure**
 
 The project follows a modular and scalable structure for ease of use and reusability.
 
-```script
+```bash
+
 ├── .vscode/
 │   └── settings.json
 ├── .github/
@@ -49,6 +59,15 @@ The project follows a modular and scalable structure for ease of use and reusabi
 │   ├── clustering.py      # Clustering and engagement classification
 │   ├── visualization.py   # Visualization functions
 │   └── analysis.py        # Application-wise user analysis
+├── streamlit/                 # Unit test cases
+│   ├── __init__.py
+│   ├── app.py
+│   ├── challenge_description.py
+│   ├── task_1_info.py
+│   ├── task_2_info.py
+│   ├── task_3_info.py
+│   ├── task_4_info.py
+│   ├── task_5_info.py
 ├── tests/                 # Unit test cases
 │   ├── __init__.py
 │   ├── test_data_processing.py
@@ -75,17 +94,18 @@ The project follows a modular and scalable structure for ease of use and reusabi
 1. **Clone the Repository**:
 
    ```bash
+   
    git clone https://github.com/tedoaba/KAIM-W2.git
    cd KAIM-W2
 
-   git checkout task-1
-   git checkout task-2
+   git checkout task-5
    ```
 
 2. **Install Dependencies**:
    All necessary Python packages are listed in the `requirements.txt` file. Install them using the following command:
 
    ```bash
+
    pip install -r requirements.txt
    ```
 
