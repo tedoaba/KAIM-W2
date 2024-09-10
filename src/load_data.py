@@ -14,37 +14,6 @@ DB_NAME = os.getenv("DB_NAME")
 DB_USER = os.getenv("DB_USER")
 DB_PASSWORD = os.getenv("DB_PASSWORD")
 
-def execute_sql_file(file_path):
-    """
-    Executes a .sql file to set up database schema and tables.
-
-    :param file_path: Path to the .sql file.
-    """
-    try:
-        # Connect to the existing database
-        connection = psycopg2.connect(
-            host=DB_HOST,
-            port=DB_PORT,
-            database=DB_NAME,
-            user=DB_USER,
-            password=DB_PASSWORD
-        )
-        cursor = connection.cursor()
-
-        # Open and execute the SQL file
-        with open(file_path, 'r') as file:
-            sql_content = file.read()
-            cursor.execute(sql_content)
-            connection.commit()
-            print(f"SQL file {file_path} executed successfully")
-
-        # Close the connection
-        cursor.close()
-        connection.close()
-
-    except Exception as e:
-        print(f"Error while executing SQL file: {e}")
-
 def load_data_from_postgres(query):
     """
     Connects to the PostgreSQL database and loads data based on the provided SQL query.
@@ -101,12 +70,12 @@ def load_data_using_sqlalchemy(query):
 if __name__ == "__main__":
     # Step 1: Execute the SQL file to set up schema/tables
     #sql_file_path1 = "../schema.sql"
-    sql_file_path2 = "../telecom.sql"
+    #sql_file_path2 = "../telecom.sql"
     #execute_sql_file(sql_file_path1)
-    execute_sql_file(sql_file_path2)
+    #execute_sql_file(sql_file_path2)
 
     # Step 2: Example usage of load data
-    #sample_query = "SELECT * FROM xdr_data"
-    #df = load_data_using_sqlalchemy(sample_query)
-    #if df is not None:
-       # print(df.head())
+    sample_query = "SELECT * FROM xdr_data"
+    df = load_data_from_postgres(sample_query)
+    if df is not None:
+        print("Database connected successfully")

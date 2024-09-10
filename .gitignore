@@ -8,9 +8,15 @@ __pycache__/
 
 # Virtual Environment
 .week2
+.env
 
 # Dataset
 data/
+
+# Database
+schema.sql
+telecom.sql
+
 
 # Distribution / packaging
 .Python
