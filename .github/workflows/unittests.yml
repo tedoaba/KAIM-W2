@@ -1,19 +1,14 @@
-<<<<<<< HEAD
+
 name: Run Unit Tests
-=======
-name: Python Unit Tests
->>>>>>> task-2
 
 on: [push, pull_request]
 
 jobs:
-<<<<<<< HEAD
   build:
     runs-on: windows-latest
     
     steps:
     - uses: actions/checkout@v2
-=======
   test:
     runs-on: ubuntu-latest
 
@@ -21,7 +16,6 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
->>>>>>> task-2
     - name: Set up Python
       uses: actions/setup-python@v2
       with:
@@ -29,17 +23,10 @@ jobs:
 
     - name: Install dependencies
       run: |
-<<<<<<< HEAD
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
     - name: Run tests
       run: |
         pytest tests/
-=======
-        pip install -r requirements.txt
 
-    - name: Run unit tests
-      run: |
-        pytest
->>>>>>> task-2

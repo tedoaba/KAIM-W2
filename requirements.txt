@@ -4,3 +4,13 @@ matplotlib
 seaborn
 scikit-learn
 pytest
+scikit-learn
+matplotlib
+seaborn
+pytest
+
+psycopg2
+python-dotenv
+psycopg2-binary
+sqlalchemy
+
